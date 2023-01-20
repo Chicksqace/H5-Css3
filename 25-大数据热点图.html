@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #333;
+        }
+        .map{
+            width: 747px;
+            height: 617px;
+            background: url(media/map.png) no-repeat;
+            margin: 0 auto;
+            position: relative;
+            
+        }
+        .city{
+            top: 227px;
+            right: 193px;
+            position: absolute;
+            color: #fff;
+            
+        }
+        .tb{
+            top: 500px;
+            right: 80px;
+        }
+        .gz{
+            top: 532px;
+            right: 173px;
+        }
+        .dotted{
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            background-color: #09f;
+        }
+        .city div[class^="pulse"]{
+            /* 保证小波纹在父元素里面水平垂直居中 放大之后向四周发散 */
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow:  0 0 12px #009dfd;
+            border-radius: 50%;
+            animation: pulse 1.2s linear infinite;
+        }
+        .pulse2{
+            animation-delay: 0.4s !important;
+        }
+        .pulse3{
+            animation-delay: 0.8s !important;
+           
+        }
+        @keyframes pulse{
+            0%{
+
+            }
+            70%{
+                /* transform: scale(); 我们不要用这个 这会导致阴影也会变大 */
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+            100%{
+                width: 70px;
+                height: 70px;
+                opacity: 0;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="map">
+        <div class="city">
+            <!-- 小点 -->
+            <div class="dotted"></div>
+            <!-- 波纹 -->
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="city tb">
+            <!-- 小点 -->
+            <div class="dotted"></div>
+            <!-- 波纹 -->
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="city gz">
+            <!-- 小点 -->
+            <div class="dotted"></div>
+            <!-- 波纹 -->
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+</html>

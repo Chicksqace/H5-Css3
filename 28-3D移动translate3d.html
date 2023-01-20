@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            /* 透视要写在被观察元素的父元素上 */
+            perspective: 200px;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transform: translateZ(500px);
+            /* 1.translateZ 沿着Z轴移动 */
+            /* 2.translateZ 后面单位跟PX */
+            /* 3.translateZ（100px）是向外走了100px */
+            /* 4.3d 简写 */
+            transform: translate3d(1000px,100px,60px);
+            /* 5.zyx是不能省略的，如果没有几句写0 */
+            /* transform: translate3d(0px,0px,100px); */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
